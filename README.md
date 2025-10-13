@@ -1,2 +1,2 @@
-# onxy_miu
-Firmware for Onxy MIU
+# ONXY MIU
+Firmware for Onxy MIU.

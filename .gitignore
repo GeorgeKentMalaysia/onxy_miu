@@ -1,0 +1,6 @@
+/Debug/
+/STM32CubeMX/MDK-ARM/
+/STM32CubeMX/EWARM/
+/Unit_Test/Debug/
+.settings/
+.vscode/
