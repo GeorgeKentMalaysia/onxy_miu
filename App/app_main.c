@@ -33,7 +33,7 @@
   */
 void APP_Init(void)
 {
-
+	DBG_Init(USART1);
 }
 
 /**

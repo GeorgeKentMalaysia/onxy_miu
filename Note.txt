@@ -1,0 +1,67 @@
+
+#include <stdbool.h>
+
+// This module uses STM32 Low-Layer (LL) drivers.
+// Ensure you have the correct device header included for your project.
+// Example for STM32L0 series:
+#include "stm32l0xx.h"
+
+// This module redirects printf output. Ensure you have a printf library
+// (like https://github.com/mpaland/printf) and its header is available.
+#include "printf.h"
+
+// --- Configuration ---
+#define DBG_CFG_BUF_SIZE 1200
+
+// --- Types ---
+
+/**
+ * @brief Represents the operational state of the debug task.
+ */
+typedef enum {
+    DBG_STATE_RUN,   /**< The task has data to process. */
+    DBG_STATE_SLEEP  /**< The task is idle and has no data to send. */
+} DBG_TaskState_t;
+
+
+// --- Public API ---
+
+/**
+ * @brief Initializes the debug module with a specific UART peripheral.
+ * @note This function DOES NOT initialize the UART peripheral itself or its GPIOs.
+ * The UART must be fully configured (e.g., by using MX_USARTx_UART_Init())
+ * before calling this function.
+ * @param uart_instance Pointer to the USART peripheral instance (e.g., USART1, USART2).
+ */
+void DBG_Init(USART_TypeDef* uart_instance);
+
+/**
+ * @brief Main task function for the debug module.
+ * @note This should be called periodically in the main application loop.
+ * It handles the non-blocking transmission of buffered data.
+ */
+void DBG_Task(void);
+
+/**
+ * @brief Checks the current state of the debug task.
+ * @note This can be used by a power manager to decide if the system can enter a
+ * low-power sleep mode.
+ * @return DBG_STATE_RUN if there is pending data, DBG_STATE_SLEEP otherwise.
+ */
+DBG_TaskState_t DBG_GetTaskState(void);
+
+/**
+ * @brief Macro to print a formatted string to the debug buffer.
+ */
+#define DBG_Print(f_, ...)      printf((f_), ##__VA_ARGS__)
+
+/**
+ * @brief Macro to print a formatted string followed by a newline.
+ */
+#define DBG_PrintLine(f_, ...)  { printf((f_), ##__VA_ARGS__); printf("\r\n"); }
+
+/**
+ * @brief Prints a single byte to the secondary debug buffer.
+ * @param byte The byte to be buffered for printing.
+ */
+void DBG_PrintByte(uint8_t byte);
