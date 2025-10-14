@@ -17,6 +17,7 @@
 #include <stdarg.h>
 #include "app_main.h"
 
+
 /* Private typedef -----------------------------------------------------------*/
 
 /* Private define ------------------------------------------------------------*/
@@ -33,7 +34,13 @@
   */
 void APP_Init(void)
 {
-	DBG_Init(USART1);
+	DBG_Init(huart1.Instance);
+	DBG_Channel_Printf(CHANNEL_DBG,"Debug module initialized!\n");
+	DBG_Channel_Printf(CHANNEL_SNF,"SNF is running...\n");
+	DBG_Channel_Printf(CHANNEL_SNF,"SNF is running...\n");
+	DBG_Channel_Printf(CHANNEL_COM,"COM is running...\n");
+	DBG_Channel_Printf(CHANNEL_COM,"COM is running...\n");
+	DBG_Channel_Printf(CHANNEL_DBG,"DEBUG is running...\n");
 }
 
 /**
@@ -44,5 +51,5 @@ void APP_Init(void)
   */
 void APP_Main(void)
 {
-
+	DBG_Task();
 }
