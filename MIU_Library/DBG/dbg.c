@@ -1,21 +1,18 @@
 /**
   ******************************************************************************
-  * @file           : app_main.c
-  * @brief          : Functions for main application
+  * @file           : dbg.c
+  * @brief          : Functions for debug task
   ******************************************************************************
   * @attention
-  * @PIC: CYK
-  * @Created: 25 Sep 2025
+  * @PIC: muhammad.ahmad@georgekent.net
+  * @Created: 18 Dec 2020
   * @Copyright: George Kent (Malaysia) Berhad.
   * 
   ******************************************************************************
 **/
 
 /* Private includes ----------------------------------------------------------*/
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
-#include "app_main.h"
+#include "dbg.h"
 
 /* Private typedef -----------------------------------------------------------*/
 
@@ -31,18 +28,12 @@
   * @param: None
   * @retval: None
   */
-void APP_Init(void)
+void DBG_Init(void)
 {
 
 }
 
-/**
-  * @brief: Main application
-  * @PIC: Ricky Siah
-  * @param: None
-  * @retval: None
-  */
-void APP_Main(void)
+void DBG_Task(void)
 {
 
 }
