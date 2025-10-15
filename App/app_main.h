@@ -1,11 +1,13 @@
 /**
   ******************************************************************************
-  * @file           : app_main.h
-  * @brief          : Header for main application
+  * @file           : app_main.c
+  * @brief          : Functions for main application
   ******************************************************************************
   * @attention
   * @PIC: CYK
-  * @Created: 25 Sep 2025
+  * @Authors:
+  *   15 Oct 2025	yee-kong.chong@georgekent.net – Original version
+  *
   * @Copyright: George Kent (Malaysia) Berhad.
   *
   ******************************************************************************

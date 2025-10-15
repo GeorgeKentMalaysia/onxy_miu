@@ -5,12 +5,14 @@
   ******************************************************************************
   * @attention
   * @PIC: muhammad.ahmad@georgekent.net
-  * @Created: 18 Dec 2020
+  * @Authors:
+  *   18 Dec 2020	muhammad.ahmad@georgekent.net – Original version
+  *   15 Oct 2025	yee-kong.chong@georgekent.net – Updated version
+  *
   * @Copyright: George Kent (Malaysia) Berhad.
   * 
   ******************************************************************************
 **/
-
 /* Private includes ----------------------------------------------------------*/
 #include "dbg.h"
 #include <string.h>
