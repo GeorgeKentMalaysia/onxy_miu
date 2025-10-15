@@ -5,17 +5,17 @@
   ******************************************************************************
   * @attention
   * @PIC: CYK
-  * @Created: 25 Sep 2025
+  * @Authors:
+  *   15 Oct 2025	yee-kong.chong@georgekent.net – Original version
+  *
   * @Copyright: George Kent (Malaysia) Berhad.
   * 
   ******************************************************************************
 **/
 
 /* Private includes ----------------------------------------------------------*/
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
 #include "app_main.h"
+
 
 /* Private typedef -----------------------------------------------------------*/
 
@@ -25,23 +25,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 
-/**
-  * @brief: Initialize for main application
-  * @PIC: Ricky Siah
-  * @param: None
-  * @retval: None
-  */
 void APP_Init(void)
 {
 
 }
 
-/**
-  * @brief: Main application
-  * @PIC: Ricky Siah
-  * @param: None
-  * @retval: None
-  */
+
 void APP_Main(void)
 {
 
