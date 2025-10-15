@@ -28,8 +28,9 @@
 void APP_Init(void)
 {
     DBG_Init(huart1.Instance);
+
     DBG_Channel_Printf(CHANNEL_DBG,"Debug module initialized!\n");
-    DBG_Channel_Printf(CHANNEL_SNF,"From SNF\n");
+    DBG_Channel_Printf(CHANNEL_SNF,"From SNF test\n");
     DBG_Channel_Printf(CHANNEL_COM,"From COM\n");
 }
 
