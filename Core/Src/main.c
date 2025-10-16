@@ -62,6 +62,10 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+#if PARTITION == 0
+/*name changed so we don't enter here. Partition 0's main is in bootloader.c*/
+int MAIN_main(void) {
+#else
 /* USER CODE END 0 */
 
 /**
@@ -72,7 +76,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+#endif
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
